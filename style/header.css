@@ -1,0 +1,10 @@
+.header__container {
+    background-color: antiquewhite;
+}
+.header__heart {
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/heart.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
