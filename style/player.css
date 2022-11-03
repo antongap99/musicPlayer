@@ -81,7 +81,16 @@
     -webkit-appearance: none;
 }
 
-.player_progress-input::-webkit-slider-runnable-track,
+.player_progress-input::-webkit-slider-runnable-track{
+    background-color:  #1E5A32;
+    border-radius: 20px;
+    border: none;
+    height: 6px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
 .player_progress-input::-moz-range-track {
     background-color:  #1E5A32;
     border-radius: 20px;
@@ -92,7 +101,20 @@
     transition-timing-function: ease-in-out;
 }
 
-.player_progress-input::-webkit-slider-thumb,
+.player_progress-input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    margin-top: -9px;
+    width: 12px;
+    height: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
 .player_progress-input::-moz-range-thumb {
     appearance: none;
     -webkit-appearance: none;
@@ -108,17 +130,28 @@
 }
 
 .player_progress-input:hover::-webkit-slider-runnable-track,
-.player_progress-input:active::-webkit-slider-runnable-track,
+.player_progress-input:active::-webkit-slider-runnable-track {
+    background-color: #E6A93F;
+}
+
 .player_progress-input:hover::-moz-range-track,
 .player_progress-input:active::-moz-range-track {
     background-color: #E6A93F;
 }
+
 .player_progress-input:hover::-webkit-slider-thumb,
-.player_progress-input:active::-webkit-slider-thumb,
-.player_progress-input:hover::-moz-range-thumb,
-.player_progress-input:active::-moz-range-thumb {
+.player_progress-input:active::-webkit-slider-thumb
+{
     background-color: #1E5A32;
 }
+
+.player_progress-input:hover::-moz-range-thumb,
+.player_progress-input:active::-moz-range-thumb
+{
+    background-color: #1E5A32;
+}
+
+
 
 .player__time {
     font-weight: 400;
@@ -148,7 +181,19 @@
     cursor: pointer;
 }
 
-.player__volume-input::-webkit-slider-thumb,
+.player__volume-input::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 12px;
+    height: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
 .player__volume-input::-moz-range-thumb {
     appearance: none;
     -webkit-appearance: none;
