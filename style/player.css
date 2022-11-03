@@ -33,7 +33,7 @@
 .player__controller {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
 }
 
 .player__icon {
@@ -81,77 +81,6 @@
     -webkit-appearance: none;
 }
 
-.player_progress-input::-webkit-slider-runnable-track{
-    background-color:  #1E5A32;
-    border-radius: 20px;
-    border: none;
-    height: 6px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-.player_progress-input::-moz-range-track {
-    background-color:  #1E5A32;
-    border-radius: 20px;
-    border: none;
-    height: 6px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-.player_progress-input::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    margin-top: -9px;
-    width: 12px;
-    height: 24px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-.player_progress-input::-moz-range-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    margin-top: -9px;
-    width: 12px;
-    height: 24px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-.player_progress-input:hover::-webkit-slider-runnable-track,
-.player_progress-input:active::-webkit-slider-runnable-track {
-    background-color: #E6A93F;
-}
-
-.player_progress-input:hover::-moz-range-track,
-.player_progress-input:active::-moz-range-track {
-    background-color: #E6A93F;
-}
-
-.player_progress-input:hover::-webkit-slider-thumb,
-.player_progress-input:active::-webkit-slider-thumb
-{
-    background-color: #1E5A32;
-}
-
-.player_progress-input:hover::-moz-range-thumb,
-.player_progress-input:active::-moz-range-thumb
-{
-    background-color: #1E5A32;
-}
-
-
 
 .player__time {
     font-weight: 400;
@@ -181,32 +110,6 @@
     cursor: pointer;
 }
 
-.player__volume-input::-webkit-slider-thumb{
-    appearance: none;
-    -webkit-appearance: none;
-    width: 12px;
-    height: 24px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-.player__volume-input::-moz-range-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 12px;
-    height: 24px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
 .player__icon {
     margin-bottom: 4px;
 }
@@ -215,4 +118,86 @@
 }
 .player__icon_mute-off {
     background-image: url('../img/VolumeOff.svg');
+}
+
+
+@media (max-width: 1024px){
+    .player__container {
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+    }
+}
+
+@media (max-width: 968px){
+    .player {
+        left: 34px;
+        right: 34px;
+        border-radius: 30px;
+    }
+
+    .player__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 22px 60px;
+        gap: 27px 20px;
+    }
+    .player__progress-wrap {
+        order: 1;
+        grid-column: 1 / -1;
+    }
+    .player__progress {
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .player__volume-wrap {
+        justify-content: end;
+    }
+}
+
+@media (max-width: 740px){
+    .player {
+        border-radius: 30px 30px 0 0 ;
+    }
+    .player_active {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 695px) {
+    .player__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 27px 20px;
+    }
+    .player__volume-wrap {
+       display: none;
+    }
+    .player__controller {
+        justify-self: end;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .player {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 445px) {
+    .player__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        gap: 16px;
+        padding: 16px;
+    }
+    .player__controller {
+        justify-self: center;
+    }
+    .player {
+        left: 0;
+        right: 0;
+    }
+    .player__progress-wrap {
+        padding-right: 0;
+    }
 }

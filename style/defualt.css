@@ -54,3 +54,19 @@ h1, h2, h3, p {
     transform: scale(0);
     /*?*/
 }
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 217px;
+    }
+}
+
+@media (max-width: 740px) {
+    body {
+        padding-bottom: 187px;
+    }
+}
+
+
+
+

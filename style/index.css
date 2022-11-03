@@ -5,3 +5,5 @@
 @import "catolog.css";
 @import "track.css";
 @import "player.css";
+@import "playerMoz.css";
+@import "playerStyleWebKit.css";

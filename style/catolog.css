@@ -5,16 +5,39 @@
     max-width: 1246px;
     grid-template-columns: repeat(auto-fill, 196px);
     justify-content: center;
-    padding: 0 20px ;
+    padding: 0 25px ;
     gap: 4px;
 }
 
 .card__btn-add {
     color: #fff;
-    grid-column: 1 / -1;
+    grid-column: -2 / -1;
     display: flex;
     align-items: center;
     justify-content: end;
     gap: 8px;
     font-weight: 600;
+    font-size: 16px;
+    padding: 16px 0;
+}
+
+@media (max-width: 1054px){
+    .card__container{
+        padding: 0 14px;
+    }
+}
+
+
+@media (max-width: 560px){
+    .card__container{
+        padding: 0 11px;
+        gap: 2px;
+        grid-template-columns: repeat(auto-fill, 148px);
+    }
+    .card__btn-add {
+        padding: 12px 0;
+        font-size: 14px;
+        gap: 4px;
+    }
+
 }
