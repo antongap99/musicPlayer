@@ -1,0 +1,20 @@
+
+.card__container{
+    margin: 0 auto;
+    display: grid;
+    max-width: 1246px;
+    grid-template-columns: repeat(auto-fill, 196px);
+    justify-content: center;
+    padding: 0 20px ;
+    gap: 4px;
+}
+
+.card__btn-add {
+    color: #fff;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    font-weight: 600;
+}

@@ -11,6 +11,9 @@
     <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#e6a93f">
     <meta name="msapplication-TileColor" content="#e6a93f">
     <meta name="theme-color" content="#e6a93f">
+    <link rel="preload" href="./fonts/SFUIDisplay-Bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/SFUIDisplay-Light.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/SFUIDisplay-Semibold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="./style/index.css">
     <title>Music Player</title>
 </head>
@@ -33,130 +36,132 @@
             </button>
         </div>
     </header>
-    <section class="catolog">
-        <h2 class="catolog__title visually-hidden">Список треков</h2>
-        <div class="catolog__container container">
+    <section class="catalog">
+        <h2 class="catalog__title visually-hidden">Список треков</h2>
             <div class="card__container">
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/TheWeekEnd.png" alt="Save your tears The Weekend">
+                        <img class="track__poster" src="./img/posters/SaveYouTears.png" alt="Save your tears The Weekend">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Save your tears</p>
+                        <p class="track__info_author">The weekend</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track track_active">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/followYou.png" alt="Save your tears The Weekend">
+                        <img class="track__poster" src="./img/posters/followYou.png" alt="follow You Imagine Dragons">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Follow You</p>
+                        <p class="track__info_author">Imagine Dragons</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/dirtFemme.png" alt="dirt Femme How Long">
+                        <img class="track__poster" src="./img/posters/dirtFemme.png" alt="dirt Femme How Long">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Dirt Femme</p>
+                        <p class="track__info_author">How Long</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/AnotherLove.png" alt="AnotherLove Tom Odell">
+                        <img class="track__poster" src="./img/posters/anotherLove.png" alt="AnotherLove Tom Odell">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Another Love</p>
+                        <p class="track__info_author">Tom Odell</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/bornToDie.png" alt="born To Die Lana Del Rey">
+                        <img class="track__poster" src="./img/posters/bornToDie.png" alt="born To Die Lana Del Rey">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Born to Die</p>
+                        <p class="track__info_author">lana Del Rey</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/hello.png" alt="hello Adele">
+                        <img class="track__poster" src="./img/posters/hello.png" alt="hello Adele">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Hello</p>
+                        <p class="track__info_author">Adele</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/cantPretend.png" alt="Can't Pretend Tom Odell">
+                        <img class="track__poster" src="./img/posters/cantPretend.png" alt="Can't Pretend Tom Odell">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Can't Pretend</p>
+                        <p class="track__info_author">Tom Odell</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/youngAndBeautiful.png" alt="young And Beautiful Lana Del Rey">
+                        <img class="track__poster" src="./img/posters/youngAndBeautiful.png" alt="young And Beautiful Lana Del Rey">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Young and Beautiful</p>
+                        <p class="track__info_author">Lana Del Rey</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img//SomeLikeYou.png" alt="Someone Like You Adele">
+                        <img class="track__poster" src="./img/posters/someoneLikeYou.png" alt="Someone Like You Adele">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Someone Like You</p>
+                        <p class="track__info_author">Adele</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/Natural.png" alt="Natural Imagine Dragons">
+                        <img class="track__poster" src="./img/posters/natural.png" alt="Natural Imagine Dragons">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Natural</p>
+                        <p class="track__info_author">Imagine Dragons</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/laughNowCry.png" alt="laugh now cry later Drake">
+                        <img class="track__poster" src="./img/posters/laughNowCry.png" alt="laugh now cry later Drake">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">laugh now cry later</p>
+                        <p class="track__info_author">Drake</p>
                     </div>
                 </button>
-                <button class="catolog__item track">
+                <button class="catalog__item track">
                     <div class="track__img-wrap">
-                        <img class="track__poster" src="./img/frozen.png" alt="frozen Madonna">
+                        <img class="track__poster" src="./img/posters/frozen.png" alt="frozen Madonna">
                     </div>
                     <div class="track__info">
-                        <p class="track__title">Save your tears</p>
-                        <p class="track__author">The weeknd</p>
+                        <p class="track__info_title">Frozen</p>
+                        <p class="track__info_author">Madonna</p>
                     </div>
                 </button>
-            </div>
-            <span class="card__delete"></span>
+            <button class="card__btn-add">
+                <span>Увидеть все</span>
+                <svg width="24" height="24" viewbox="0 0 24 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
+                </svg>
+            </button>
         </div>
     </section>
-    <section class="cotrol">
+    <section class="control">
         <div class="player player_active">
             <h2 class="visually-hidden">Плеер</h2>
-
             <div class="player__container">
                 <div class="player__info">
-                    <p class="player__">Follow You</p>
-                    <p class="player">Imagine Dragons</p>
+                    <p class="player__info_title">Follow You</p>
+                    <p class="player__info_author">Imagine Dragons</p>
                 </div>
                 <div class="player__controller">
                     <button class="player__icon player__icon_stop "></button>
@@ -178,8 +183,8 @@
                 <div class="player__volume-wrap">
                     <div class="player__volume">
                         <input type="range" class="player__volume-input" min="0" max="100" value="100">
-                        <button class="player__icon player__icon_mute"></button>
                     </div>
+                    <button class="player__icon player__icon_mute"></button>
                 </div>
             </div>
         </div>
