@@ -15,6 +15,7 @@
     <link rel="preload" href="./fonts/SFUIDisplay-Light.woff2" as="font" crossorigin>
     <link rel="preload" href="./fonts/SFUIDisplay-Semibold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="./style/index.css">
+    <script defer src="./script/index.js"></script>
     <title>Music Player</title>
 </head>
 <body>
@@ -39,7 +40,7 @@
     <section class="catalog">
         <h2 class="catalog__title visually-hidden">Список треков</h2>
             <div class="card__container">
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="The Weeknd - Save Your Tears.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/SaveYouTears.png" alt="Save your tears The Weekend">
                     </div>
@@ -48,7 +49,7 @@
                         <p class="track__info_author">The weekend</p>
                     </div>
                 </button>
-                <button class="catalog__item track track_active">
+                <button class="catalog__item track track_active" data-track="Imagine Dragons - Follow You.mp3" >
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/followYou.png" alt="follow You Imagine Dragons">
                     </div>
@@ -57,7 +58,7 @@
                         <p class="track__info_author">Imagine Dragons</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Tove Lo - How Long.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/dirtFemme.png" alt="dirt Femme How Long">
                     </div>
@@ -66,7 +67,7 @@
                         <p class="track__info_author">How Long</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Tom Odell - Another Love.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/anotherLove.png" alt="AnotherLove Tom Odell">
                     </div>
@@ -75,7 +76,7 @@
                         <p class="track__info_author">Tom Odell</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Lana Del Rey - Born To Die.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/bornToDie.png" alt="born To Die Lana Del Rey">
                     </div>
@@ -84,7 +85,7 @@
                         <p class="track__info_author">lana Del Rey</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Adele - Hello.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/hello.png" alt="hello Adele">
                     </div>
@@ -93,7 +94,7 @@
                         <p class="track__info_author">Adele</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Tom Odell - Can't Pretend.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/cantPretend.png" alt="Can't Pretend Tom Odell">
                     </div>
@@ -102,7 +103,7 @@
                         <p class="track__info_author">Tom Odell</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Lana Del Rey - Young And Beautiful.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/youngAndBeautiful.png" alt="young And Beautiful Lana Del Rey">
                     </div>
@@ -111,7 +112,7 @@
                         <p class="track__info_author">Lana Del Rey</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Adele - Someone Like You.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/someoneLikeYou.png" alt="Someone Like You Adele">
                     </div>
@@ -120,7 +121,7 @@
                         <p class="track__info_author">Adele</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Imagine Dragons - Natural.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/natural.png" alt="Natural Imagine Dragons">
                     </div>
@@ -129,7 +130,7 @@
                         <p class="track__info_author">Imagine Dragons</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Drake - Laugh Now Cry Later.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/laughNowCry.png" alt="laugh now cry later Drake">
                     </div>
@@ -138,7 +139,7 @@
                         <p class="track__info_author">Drake</p>
                     </div>
                 </button>
-                <button class="catalog__item track">
+                <button class="catalog__item track" data-track="Madonna - Frozen.mp3">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="./img/posters/frozen.png" alt="frozen Madonna">
                     </div>
@@ -156,7 +157,7 @@
         </div>
     </section>
     <section class="control">
-        <div class="player player_active">
+        <div class="player">
             <h2 class="visually-hidden">Плеер</h2>
             <div class="player__container">
                 <div class="player__info">
@@ -164,11 +165,11 @@
                     <p class="player__info_author">Imagine Dragons</p>
                 </div>
                 <div class="player__controller">
-                    <button class="player__icon player__icon_stop "></button>
-                    <button class="player__icon player__icon_prev "></button>
-                    <button class="player__icon player__icon_pause "></button>
-                    <button class="player__icon player__icon_next "></button>
-                    <button class="player__icon player__icon_like "></button>
+                    <button class="player__icon player__icon_stop player__controller_stop"></button>
+                    <button class="player__icon player__icon_prev player__controller_prev"></button>
+                    <button class="player__icon player__icon_pause player__controller_pause player__controller_play"></button>
+                    <button class="player__icon player__icon_next player__controller_next"></button>
+                    <button class="player__icon player__icon_like player__controller_like"></button>
                 </div>
                 <div class="player__progress-wrap">
                     <div class="player__progress">

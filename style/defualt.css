@@ -14,11 +14,16 @@ body {
     line-height: 1.2; /*если бы указал проценты, то выеличина бы рассчитывалась от 16px только
     но 1.2 рассчитывается т при смене размера шрифта
     */
-    background-image: url('../img/bg.jpg');
+    /* background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; */
+    background: rgb(87,81,179);
+    background: -moz-linear-gradient(90deg, rgba(87,81,179,1) 0%, rgba(144,174,89,0.9923319669664741) 35%, rgba(0,255,187,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(87,81,179,1) 0%, rgba(144,174,89,0.9923319669664741) 35%, rgba(0,255,187,1) 100%);
+    background: linear-gradient(90deg, rgba(87,81,179,1) 0%, rgba(144,174,89,0.9923319669664741) 35%, rgba(0,255,187,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5751b3",endColorstr="#00ffbb",GradientType=1);
     padding-bottom: 172px;
 }
 
@@ -53,6 +58,18 @@ h1, h2, h3, p {
     position: fixed;
     transform: scale(0);
     /*?*/
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    background-color:  #00ffbb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bff178;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #dcbf9a;
 }
 
 @media (max-width: 768px) {

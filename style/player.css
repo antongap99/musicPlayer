@@ -52,7 +52,7 @@
 .player__icon_pause {
     background-image: url('../img/Pause.svg');
 }
-.player__icon_play {
+.player__controller_play {
     background-image: url('../img/play.svg');
 }
 .player__icon_next {

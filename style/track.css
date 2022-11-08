@@ -70,17 +70,7 @@
     overflow: auto;
 
 }
-::-webkit-scrollbar {
-    width: 4px;
-    height: 8px;
-    background-color: #f1b278;
-}
 
-::-webkit-scrollbar-thumb {
-    background-color: #f18d1a;
-    border-radius: 9em;
-    box-shadow: inset 1px 1px 10px #e2a657;
-}
 .track__info_title{
     margin-bottom: 6px;
     font-weight: 600;
