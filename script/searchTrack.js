@@ -4,6 +4,9 @@ export const searchController = (renderCatalog, checkCount) => {
 
     search.addEventListener('submit', async (e) => {
         e.preventDefault();
+        console.log(search.search.value);
+        const url = `${API_URL}api/music?{search="${search.search.value}"}`
+        console.log('url: ', url);
         const playlist = await fetch(`${API_URL}api/music?{search="${search.search.value}"}`).then((data) => {
             console.log(data);
             return data.json();

@@ -8,9 +8,16 @@ import {searchController} from './searchTrack.js';
 
 const init = async () => {
     const audio = new Audio();
-    const data =  await fetch(`${API_URL}api/music`).then((data) => {
-        return data.json();
-    });
+    let data = []
+    try {
+        data =  await fetch(`${API_URL}api/music`).then((data) => {
+            return data.json();
+        });
+        console.log(data);
+    } catch (error) {
+        console.log('включить апи');
+    }
+    console.log(data);
     const renderCatalog =  renderController(data);
     const {checkCount, addHandlerTrack} = musicController(audio, renderCatalog, data);
     playerBarController(audio);

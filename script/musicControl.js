@@ -5,7 +5,6 @@ import {API_URL} from './const.js'
 
 export const musicController =(audio, renderCatalog, dataMusic) => {
     if(!dataMusic.length) {
-        console.log('!');
         return;
     }
     const pauseBtn = document.querySelector('.player__icon_pause');
@@ -49,7 +48,7 @@ export const musicController =(audio, renderCatalog, dataMusic) => {
 
         if(data.length){
             playList = [...data];
-            if(!playList.legth){
+            if(!playList.length){
                 return;
             }
         } else {
@@ -65,7 +64,7 @@ export const musicController =(audio, renderCatalog, dataMusic) => {
         }else {
 
 
-            favoriteList = localStorage.getItem('favorite')
+            const favoriteList = localStorage.getItem('favorite')
             ? JSON.parse(localStorage.getItem('favorite'))
             : [];
 
@@ -164,6 +163,7 @@ export const musicController =(audio, renderCatalog, dataMusic) => {
         });
         renderCatalog(data);
         checkCount();
+        console.log([...tracksCard]);
         addHandlerTrack();
         returnToMain(renderCatalog, addHandlerTrack, checkCount);
         stopMusic();
